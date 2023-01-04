@@ -1,0 +1,16 @@
+name: On Push Master
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: dump path
+        run: pwd
+      - name: dump folder
+        run: ls -al .
